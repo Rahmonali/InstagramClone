@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct InstagramCloneApp: App {
+    
+    @StateObject private var postVM = PostViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(postVM)
         }
     }
 }
